@@ -31,7 +31,7 @@ $APPLICATION->ShowPanel();
     <div class="header">
         <div class="header_logo"">
             <a href="/">
-                <img src="<?php echo SITE_TEMPLATE_PATH?>/img/Lego_logo.svg.png" alt="" style="width:100px;>
+                <img src="<?php echo SITE_TEMPLATE_PATH?>/img/Lego_logo.svg.png" alt="">
             </a>
         </div>
         <div class="header_content">
@@ -42,7 +42,7 @@ $APPLICATION->ShowPanel();
                 <?php
                     // Поиск по заголовкам - http://dev.1c-bitrix.ru/user_help/settings/search/components_2/search_title.php
                     $APPLICATION->IncludeComponent("bitrix:search.title", "main_search", Array(
-                    "NUM_CATEGORIES" => "1",	// Количество категорий поиска
+                        "NUM_CATEGORIES" => "1",	// Количество категорий поиска
                         "TOP_COUNT" => "5",	// Количество результатов в каждой категории
                         "ORDER" => "date",	// Сортировка результатов
                         "USE_LANGUAGE_GUESS" => "Y",	// Включить автоопределение раскладки клавиатуры
@@ -67,25 +67,25 @@ $APPLICATION->ShowPanel();
             </div>
             <div class="row">
                 <?php $APPLICATION->IncludeComponent("bitrix:menu", "main_menu", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "1",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
-			0 => "",
-		),
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-	),
-	false
-);?>
+                    "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                        "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+                        "DELAY" => "N",	// Откладывать выполнение шаблона меню
+                        "MAX_LEVEL" => "1",	// Уровень вложенности меню
+                        "MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+                            0 => "",
+                        ),
+                        "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+                        "MENU_CACHE_TYPE" => "A",	// Тип кеширования
+                        "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+                        "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+                        "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                    ),
+                    false
+                );?>
             </div>
         </div>
         <div class="header_cart">
-            <a href="#">
+            <a href="#" class="header_cart_auth">
                 <svg>
                     <use xlink:href="#power-button"></use>
                 </svg>

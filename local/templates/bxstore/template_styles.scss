@@ -1,16 +1,53 @@
 body {
+  //font-family: 'Pacifico', cursive;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   color: #333333;
 }
 
 .header {
-  &_logo {
-    a {
+  display: flex;
 
+  &_logo {
+    width: 117px;
+
+    a {
+      display: block;
     }
+
     img {
-      
+      width: 100%;
+    }
+  }
+
+  &_content {
+    width: calc(100% - 117px - 190px);
+
+    &_row {
+
+      span {
+        font-family: 'Pacifico', cursive;
+        color: var(--color1);
+        font-size: 29px;
+        padding: 20px 0px;
+        display: block;
+        text-align: center;
+      }
+
+      i {
+        font-style: normal;
+        color: var(--color2);
+      }
+    }
+  }
+
+  &_cart {
+    width: 190px;
+    &_auth {
+      svg{
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
