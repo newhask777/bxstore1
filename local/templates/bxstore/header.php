@@ -15,7 +15,7 @@ $CurUri = $APPLICATION->GetCurUri();
 
     // Пример подключения CSS
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/vars.min.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-grid.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap/bootstrap-grid.min.css');
 
     $APPLICATION->ShowHead();
     ?>
@@ -29,14 +29,14 @@ $APPLICATION->ShowPanel();
 
 <div class="container">
     <div class="header">
-        <div class="header_logo"">
+        <div class="header_logo">
             <a href="/">
                 <img src="<?php echo SITE_TEMPLATE_PATH?>/img/Lego_logo.svg.png" alt="">
             </a>
         </div>
         <div class="header_content">
             <div class="row">
-                <span>Вязанные игрушки: <i>ручной работы</i></span>
+                <span class="test">Вязанные игрушки: <i>ручной работы</i></span>
             </div>
             <div class="row">
                 <?php
@@ -116,5 +116,4 @@ $APPLICATION->ShowPanel();
         </div>
     </div>
 </div>
-
 

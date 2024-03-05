@@ -1,5 +1,24 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
+<div class="footer">
+    <div class="footer_copies">
+        Copyrights
+        <a href="#">Политика коофиденциальности</a>
+    </div>
+    <div class="footer_stat">
+        <?php // Таблица статистики - http://dev.1c-bitrix.ru/user_help/statistic/components_2/statistic_table.php
+            $APPLICATION->IncludeComponent("bitrix:statistic.table", "statistic", Array(
+	"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "20",	// Время кеширования (сек.)
+		"CACHE_NOTES" => "",
+		"CACHE_FOR_ADMIN" => "N",	// Кешировать для администраторов
+	),
+	false
+);
+        ?>
+    </div>
+</div>
+
 <svg class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 56" id="biodegradable">
         <path d="M47.7189 18.8753C48.4199 19.2347 49.1936 18.5555 48.9563 17.7844C47.4046 12.7451 42.5384 0.65335 31.4396 0.0416406C18.7944 -0.655174 14.9876 7.56262 16.2194 12.0143L17.6986 15.041C18.3728 17.2671 20.5386 21.2057 27.4116 20.9916C36.2676 20.7157 40.2597 15.0509 47.7189 18.8753Z"

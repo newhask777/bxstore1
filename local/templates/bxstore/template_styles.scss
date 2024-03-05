@@ -5,6 +5,7 @@ body {
   color: #333333;
 }
 
+// HEADER ===================================
 .header {
   display: flex;
 
@@ -23,7 +24,7 @@ body {
   &_content {
     width: calc(100% - 117px - 190px);
 
-    &_row {
+    .row {
 
       span {
         font-family: 'Pacifico', cursive;
@@ -43,11 +44,28 @@ body {
 
   &_cart {
     width: 190px;
+
     &_auth {
-      svg{
+      svg {
         width: 20px;
         height: 20px;
       }
     }
+  }
+}
+
+// FOOTER ===================================
+.footer {
+  background-color: #444;
+  display: flex;
+  color: #888888;
+  padding: 30px;
+
+  &_copies {
+    width: 40%;
+  }
+
+  &_stat {
+    width: 40%;
   }
 }
